@@ -6,7 +6,7 @@
       .panel-body
         = render 'layouts/flash_message'
         = devise_error_messages!
-        %h2.text-center{:style => "margin-bottom: 25px;"} Log in
+        %h4.text-center{:style => "margin-bottom: 25px;"} Log in
         = form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "form-horizontal"}) do |f|
           .field.form-group
             .control-label.col-sm-4{:style => 'text-align: left'}
