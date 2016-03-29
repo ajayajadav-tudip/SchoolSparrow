@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   end
 
   def is_admin?
-
+    return type == 'Admin'
   end
 
 end
