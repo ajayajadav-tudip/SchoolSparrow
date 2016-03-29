@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     )
   end
 
+  def is_admin?
+    
+  end
+
 end

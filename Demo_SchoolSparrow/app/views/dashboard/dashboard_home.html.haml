@@ -62,7 +62,7 @@
         %li.dropdown
           %a.dropdown-toggle.username{"data-toggle" => "dropdown", :href => "#"}
             %span.hidden-xs
-              John McCartney
+              #{current_user.first_name}
               %i.fa.fa-caret-down
             %img{:alt => "Dangerfield", :src => "assets/dangerfield.png"}/
           %ul.dropdown-menu.userinfo.arrow
@@ -848,45 +848,11 @@
                           %tr
                             %td
                               %input{:type => "checkbox"}/
-                            %td cranston
+                            %td #{@users.first_name}
                             %td.hidden-xs cranstonb@gnail.com
                             %td
                               %span.label.label-success Approved
-                          %tr
-                            %td
-                              %input{:type => "checkbox"}/
-                            %td aaron
-                            %td.hidden-xs ppaul@lime.com
-                            %td
-                              %span.label.label-grape Pending
-                          %tr
-                            %td
-                              %input{:type => "checkbox"}/
-                            %td norris
-                            %td.hidden-xs j.norris@gnail.com
-                            %td
-                              %span.label.label-warning Suspended
-                          %tr
-                            %td
-                              %input{:type => "checkbox"}/
-                            %td gunner
-                            %td.hidden-xs gunner@outluk.com
-                            %td
-                              %span.label.label-danger Blocked
-                          %tr
-                            %td
-                              %input{:type => "checkbox"}/
-                            %td mrford
-                            %td.hidden-xs fordm@gnail.com
-                            %td
-                              %span.label.label-grape Pending
-                          %tr
-                            %td
-                              %input{:type => "checkbox"}/
-                            %td stewrtt
-                            %td.hidden-xs swttrs@outluk.com
-                            %td
-                              %span.label.label-danger Blocked
+
                         %tfoot
                           %tr.active
                             %td.text-left{:colspan => "4"}
