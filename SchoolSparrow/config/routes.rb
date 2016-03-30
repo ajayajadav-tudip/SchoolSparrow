@@ -4,10 +4,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'home#index'
-  get '/dashboard' => 'dashboard#dashboard_home', as: :dashboard_home
-  get '/gallery' => 'dashboard#dashboard_admin', as: :dashboard_admin
-
-
+  get '/dashboard/home' => 'dashboard#dashboard_home', as: :dashboard_home
+  get '/dashboard/admin' => 'dashboard#dashboard_admin', as: :dashboard_admin
 
   resources :school
   Rails.application.routes.draw do
@@ -16,10 +14,10 @@ Rails.application.routes.draw do
         confirmations: 'users/confirmations',
         registrations: 'users/registrations',
         passwords: 'users/passwords',
-        sessions: 'users/sessions'
+        sessions: 'users/sessions',
     }
   end
-
+  get '/password/edit' => 'dashboard#edit_password', as: :edit_password
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -64,12 +64,12 @@
             %span.hidden-xs
               #{current_user.first_name}
               %i.fa.fa-caret-down
-            %img{:alt => "Dangerfield", :src => "assets/dangerfield.png"}/
+            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}/
           %ul.dropdown-menu.userinfo.arrow
             %li.username
               %a{:href => "#"}
                 .pull-left
-                  %img{:alt => "Jeff Dangerfield", :src => "assets/dangerfield.png"}/
+                  %img{:alt => "Jeff Dangerfield", :src => "/assets/dangerfield.png"}/
                 .pull-right
                   %h5 Howdy, John!
                   %small
@@ -82,9 +82,7 @@
                     Edit Profile
                     %i.pull-right.fa.fa-pencil
                 %li
-                  %a{:href => "#"}
-                    Account
-                    %i.pull-right.fa.fa-cog
+                  = link_to "Change Password", edit_password_path
                 %li
                   %a{:href => "#"}
                     Help
@@ -105,42 +103,42 @@
               %li
                 %a.active{:href => "#"}
                   %span.time 6 mins
-                  %img{:alt => "avatar", :src => "assets/doyle.png"}/
+                  %img{:alt => "avatar", :src => "/assets/doyle.png"}/
                   %div
                     %span.name Alan Doyle
                     %span.msg Please mail me the files by tonight.
               %li
                 %a{:href => "#"}
                   %span.time 12 mins
-                  %img{:alt => "avatar", :src => "assets/paton.png"}/
+                  %img{:alt => "avatar", :src => "/assets/paton.png"}/
                   %div
                     %span.name Polly Paton
                     %span.msg Uploaded all the files to server. Take a look.
               %li
                 %a{:href => "#"}
                   %span.time 9 hrs
-                  %img{:alt => "avatar", :src => "assets/corbett.png"}/
+                  %img{:alt => "avatar", :src => "/assets/corbett.png"}/
                   %div
                     %span.name Simon Corbett
                     %span.msg I am signing off for today.
               %li
                 %a{:href => "#"}
                   %span.time 2 days
-                  %img{:alt => "avatar", :src => "assets/tennant.png"}/
+                  %img{:alt => "avatar", :src => "/assets/tennant.png"}/
                   %div
                     %span.name David Tennant
                     %span.msg How are you doing?
               %li
                 %a{:href => "#"}
                   %span.time 6 mins
-                  %img{:alt => "avatar", :src => "assets/doyle.png"}/
+                  %img{:alt => "avatar", :src => "/assets/doyle.png"}/
                   %div
                     %span.name Alan Doyle
                     %span.msg Please mail me the files by tonight.
               %li
                 %a{:href => "#"}
                   %span.time 12 mins
-                  %img{:alt => "avatar", :src => "assets/paton.png"}/
+                  %img{:alt => "avatar", :src => "/assets/paton.png"}/
                   %div
                     %span.name Polly Paton
                     %span.msg Uploaded all the files to server. Take a look.
@@ -504,23 +502,23 @@
               %ul.chat-users
                 %li{"data-stats" => "online"}
                   %a{:href => "javascript:;"}
-                    %img{:alt => "", :src => "assets/potter.png"}
+                    %img{:alt => "", :src => "/assets/potter.png"}
                       %span Jeremy Potter
                 %li{"data-stats" => "online"}
                   %a{:href => "javascript:;"}
-                    %img{:alt => "", :src => "assets/tennant.png"}
+                    %img{:alt => "", :src => "/assets/tennant.png"}
                       %span David Tennant
                 %li{"data-stats" => "online"}
                   %a{:href => "javascript:;"}
-                    %img{:alt => "", :src => "assets/johansson.png"}
+                    %img{:alt => "", :src => "/assets/johansson.png"}
                       %span Anna Johansson
                 %li{"data-stats" => "busy"}
                   %a{:href => "javascript:;"}
-                    %img{:alt => "", :src => "assets/jackson.png"}
+                    %img{:alt => "", :src => "/assets/jackson.png"}
                       %span Eric Jackson
                 %li{"data-stats" => "away"}
                   %a{:href => "javascript:;"}
-                    %img{:alt => "", :src => "assets/jobs.png"}
+                    %img{:alt => "", :src => "/assets/jobs.png"}
                       %span Howard Jobs
                 /
                   li data-stats="offline"><a href="javascript:;"><img src="assets/demo/avatar/watson.png" alt=""><span>Annie Watson</span></a></li>
@@ -1005,7 +1003,7 @@
                       #threads.tab-pane.active
                         %ul.panel-threads
                           %li
-                            %img{:alt => "Aniss", :src => "assets/aniss.png"}
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
                               .content
                                 %span.time 20 mins
                                 %a.title{:href => "#"} Envato’s Most Wanted – $5,000 Reward for Music & Band Themes and Templates
@@ -1015,7 +1013,7 @@
                                   in
                                   %a{:href => "#"} Section #3
                           %li
-                            %img{:alt => "Corbett", :src => "assets/corbett.png"}
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
                               .content
                                 %span.time 2 hrs
                                 %a.title{:href => "#"} How to create a corporate wordpress theme?
@@ -1025,7 +1023,7 @@
                                   in
                                   %a{:href => "#"} Section #15
                           %li
-                            %img{:alt => "Dangerfield", :src => "assets/dangerfield.png"}
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
                               .content
                                 %span.time 4 hrs
                                 %a.title{:href => "#"} Which cart is growing in popularity - WOOCOMMERCE or OPENCART? And which one would you choose?
@@ -1035,7 +1033,7 @@
                                   in
                                   %a{:href => "#"} Section #9
                           %li
-                            %img{:alt => "Doyle", :src => "assets/doyle.png"}
+                            %img{:alt => "Doyle", :src => "/assets/doyle.png"}
                               .content
                                 %span.time 13 hrs
                                 %a.title{:href => "#"} Pros and Cons of Using Grids in Responsive Web Design
@@ -1045,7 +1043,7 @@
                                   in
                                   %a{:href => "#"} Section #11
                           %li
-                            %img{:alt => "Jackson", :src => "assets/jackson.png"}
+                            %img{:alt => "Jackson", :src => "/assets/jackson.png"}
                               .content
                                 %span.time 19 hrs
                                 %a.title{:href => "#"} Best Web & Graphic Design Proposal Software
@@ -1055,7 +1053,7 @@
                                   in
                                   %a{:href => "#"} Section #18
                           %li
-                            %img{:alt => "Aniss", :src => "assets/aniss.png"}
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
                               .content
                                 %span.time 20 mins
                                 %a.title{:href => "#"} Envato’s Most Wanted – $5,000 Reward for Music & Band Themes and Templates
@@ -1065,7 +1063,7 @@
                                   in
                                   %a{:href => "#"} Section #3
                           %li
-                            %img{:alt => "Corbett", :src => "assets/corbett.png"}
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
                               .content
                                 %span.time 2 hrs
                                 %a.title{:href => "#"} How to create a corporate wordpress theme?
@@ -1075,7 +1073,7 @@
                                   in
                                   %a{:href => "#"} Section #15
                           %li
-                            %img{:alt => "Dangerfield", :src => "assets/dangerfield.png"}
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
                               .content
                                 %span.time 4 hrs
                                 %a.title{:href => "#"} Which cart is growing in popularity - WOOCOMMERCE or OPENCART? And which one would you choose?
@@ -1085,7 +1083,7 @@
                                   in
                                   %a{:href => "#"} Section #9
                           %li
-                            %img{:alt => "Doyle", :src => "assets/doyle.png"}
+                            %img{:alt => "Doyle", :src => "/assets/doyle.png"}
                               .content
                                 %span.time 13 hrs
                                 %a.title{:href => "#"} Pros and Cons of Using Grids in Responsive Web Design
@@ -1095,7 +1093,7 @@
                                   in
                                   %a{:href => "#"} Section #11
                           %li
-                            %img{:alt => "Jackson", :src => "assets/jackson.png"}
+                            %img{:alt => "Jackson", :src => "/assets/jackson.png"}
                               .content
                                 %span.time 19 hrs
                                 %a.title{:href => "#"} Best Web & Graphic Design Proposal Software
@@ -1108,7 +1106,7 @@
                       #comments.tab-pane
                         %ul.panel-comments
                           %li
-                            %img{:alt => "Aniss", :src => "assets/aniss.png"}
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1123,7 +1121,7 @@
                                   %a{:href => "#"} Article #121
                                 Just wondering - can random users see our comments? If so, allow them to comment!
                           %li
-                            %img{:alt => "Corbett", :src => "assets/corbett.png"}
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1138,7 +1136,7 @@
                                   %a{:href => "#"} Article #55
                                 Not sure what changed but for the last few weeks a few of my regulars are having their comments held for moderation.
                           %li
-                            %img{:alt => "Corbett", :src => "assets/paton.png"}
+                            %img{:alt => "Corbett", :src => "/assets/paton.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1153,7 +1151,7 @@
                                   %a{:href => "#"} Article #12
                                 I’m sure there is a tool for that.
                           %li
-                            %img{:alt => "Watson", :src => "assets/watson.png"}
+                            %img{:alt => "Watson", :src => "/assets/watson.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1168,7 +1166,7 @@
                                   %a{:href => "#"} Article #223
                                 We have enough problems with Spammers already without letting non members leave comments.
                           %li
-                            %img{:alt => "Aniss", :src => "assets/aniss.png"}
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1183,7 +1181,7 @@
                                   %a{:href => "#"} Article #121
                                 Just wondering - can random users see our comments? If so, allow them to comment!
                           %li
-                            %img{:alt => "Corbett", :src => "assets/corbett.png"}
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1198,7 +1196,7 @@
                                   %a{:href => "#"} Article #55
                                 Not sure what changed but for the last few weeks a few of my regulars are having their comments held for moderation.
                           %li
-                            %img{:alt => "Corbett", :src => "assets/paton.png"}
+                            %img{:alt => "Corbett", :src => "/assets/paton.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1213,7 +1211,7 @@
                                   %a{:href => "#"} Article #12
                                 I’m sure there is a tool for that.
                           %li
-                            %img{:alt => "Watson", :src => "assets/watson.png"}
+                            %img{:alt => "Watson", :src => "/assets/watson.png"}
                               .content
                                 %span.actions
                                   .options
@@ -1231,7 +1229,7 @@
                       #users.tab-pane
                         %ul.panel-users
                           %li
-                            %img{:alt => "Paton", :src => "assets/paton.png"}
+                            %img{:alt => "Paton", :src => "/assets/paton.png"}
                               .content
                                 %span.time 11 mins
                                 %span.desc
@@ -1239,7 +1237,7 @@
                                   followed
                                   %a{:href => "#"} John White
                           %li
-                            %img{:alt => "Tennant", :src => "assets/tennant.png"}
+                            %img{:alt => "Tennant", :src => "/assets/tennant.png"}
                               .content
                                 %span.time 48 mins
                                 %span.desc
@@ -1247,7 +1245,7 @@
                                   unfollowed
                                   %a{:href => "#"} Tony Doubleday
                           %li
-                            %img{:alt => "Jobs", :src => "assets/jobs.png"}
+                            %img{:alt => "Jobs", :src => "/assets/jobs.png"}
                               .content
                                 %span.time 5 hrs
                                 %span.desc
@@ -1255,7 +1253,7 @@
                                   commented on
                                   %a{:href => "#"} Selling PSD Template Rights!
                           %li
-                            %img{:alt => "Dangerfield", :src => "assets/dangerfield.png"}
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
                               .content
                                 %span.time 6 hrs
                                 %span.desc
@@ -1263,7 +1261,7 @@
                                   posted on
                                   %a{:href => "#"} Please help with Theme Design
                           %li
-                            %img{:alt => "Aniss", :src => "assets/aniss.png"}
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
                               .content
                                 %span.time 22 hrs
                                 %span.desc
@@ -1271,7 +1269,7 @@
                                   followed
                                   %a{:href => "#"} Polly Paton
                           %li
-                            %img{:alt => "Corbett", :src => "assets/corbett.png"}
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
                               .content
                                 %span.time 3 days
                                 %span.desc
@@ -1279,7 +1277,7 @@
                                   followed
                                   %a{:href => "#"} Anna Johansson
                           %li
-                            %img{:alt => "Paton", :src => "assets/paton.png"}
+                            %img{:alt => "Paton", :src => "/assets/paton.png"}
                               .content
                                 %span.time 11 mins
                                 %span.desc
@@ -1287,7 +1285,7 @@
                                   followed
                                   %a{:href => "#"} John White
                           %li
-                            %img{:alt => "Tennant", :src => "assets/tennant.png"}
+                            %img{:alt => "Tennant", :src => "/assets/tennant.png"}
                               .content
                                 %span.time 48 mins
                                 %span.desc
@@ -1295,7 +1293,7 @@
                                   unfollowed
                                   %a{:href => "#"} Tony Doubleday
                           %li
-                            %img{:alt => "Jobs", :src => "assets/jobs.png"}
+                            %img{:alt => "Jobs", :src => "/assets/jobs.png"}
                               .content
                                 %span.time 5 hrs
                                 %span.desc
@@ -1303,7 +1301,7 @@
                                   commented on
                                   %a{:href => "#"} Selling PSD Template Rights!
                           %li
-                            %img{:alt => "Dangerfield", :src => "assets/dangerfield.png"}
+                            %img{:alt => "Dangerfield", :src => "/assets/dangerfield.png"}
                               .content
                                 %span.time 6 hrs
                                 %span.desc
@@ -1311,7 +1309,7 @@
                                   posted on
                                   %a{:href => "#"} Please help with Theme Design
                           %li
-                            %img{:alt => "Aniss", :src => "assets/aniss.png"}
+                            %img{:alt => "Aniss", :src => "/assets/aniss.png"}
                               .content
                                 %span.time 22 hrs
                                 %span.desc
@@ -1319,7 +1317,7 @@
                                   followed
                                   %a{:href => "#"} Polly Paton
                           %li
-                            %img{:alt => "Corbett", :src => "assets/corbett.png"}
+                            %img{:alt => "Corbett", :src => "/assets/corbett.png"}
                               .content
                                 %span.time 3 days
                                 %span.desc

@@ -29,11 +29,11 @@ class Users::SessionsController < Devise::SessionsController
     scope = Devise::Mapping.find_scope!(resource_or_scope)
     resource ||= resource_or_scope
     sign_in(scope, resource) unless warden.user(scope) == resource
-    after_sign_in_path_for(resource)
+    after_sign_in_path_for(user)
   end
 
   protected
-    def after_sign_in_path_for(resource)
+    def after_sign_in_path_for(user)
       if current_user.is_admin?
         dashboard_admin_path
       elsif current_user.is_prospect?

@@ -1,4 +1,16 @@
 class Users::PasswordsController < Devise::PasswordsController
+  prepend_before_action :require_no_authentication
+
+
+
+  private
+
+  def user_params
+    # NOTE: Using `strong_parameters` gem
+    params.require(:user).permit(:password, :password_confirmation, :current_password)
+  end
+
+
   # GET /resource/password/new
   # def new
   #   super
