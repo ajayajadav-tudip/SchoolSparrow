@@ -11,28 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330074532) do
-
-  create_table "profiles", force: :cascade do |t|
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.integer  "users_id",           limit: 4
-    t.date     "dob"
-    t.integer  "phonenumber",        limit: 4
-    t.string   "photoupload",        limit: 255
-    t.string   "rentvsbuyvsunknown", limit: 255
-    t.integer  "whenlookkingfor",    limit: 4
-    t.integer  "noofbeds",           limit: 4
-    t.integer  "noofbathrooms",      limit: 4
-    t.integer  "budget",             limit: 4
-    t.integer  "noofchildren",       limit: 4
-    t.integer  "agechild",           limit: 4
-    t.string   "decision1",          limit: 255
-    t.string   "decision2",          limit: 255
-    t.string   "workaddress",        limit: 255
-  end
-
-  add_index "profiles", ["users_id"], name: "index_profiles_on_users_id", using: :btree
+ActiveRecord::Schema.define(version: 20160329121649) do
 
   create_table "roles", force: :cascade do |t|
     t.string   "name",       limit: 255

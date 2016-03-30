@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :users_roles
   has_many :roles, through: :users_roles
-  has_one :profile
-  accepts_nested_attributes_for :profile
 
   # Is_admin Action find whether the user holds the role as Admin
   def is_admin?
@@ -45,13 +43,6 @@ class User < ActiveRecord::Base
         )
       end
 
-  # after_create :set_default_role is used to set default role as Prospect
-  #after_create :build_profile
-
-    # protected
-    #   def profile
-    #     super || build_profile
-    #   end
 
 
 end

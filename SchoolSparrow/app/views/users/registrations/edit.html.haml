@@ -1,65 +1,31 @@
 %h2
-= form_for(@user , url:update_user_profile_path, html: { method: :put }) do |f|
+  Edit #{resource_name.to_s.humanize}
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = devise_error_messages!
   .field
     = f.label :email
     %br/
     = f.email_field :email, autofocus: true
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+    %div
+      Currently waiting confirmation for: #{resource.unconfirmed_email}
   .field
-
-  = f.fields_for :profile do |profile_form|
-    = profile_form.label :date_of_birth
+    = f.label :password
+    %i (leave blank if you don't want to change it)
     %br/
-    = profile_form.text_field :dob, autocomplete: 'off'
-    .field
-    = profile_form.label :phone_number
+    = f.password_field :password, autocomplete: "off"
+  .field
+    = f.label :password_confirmation
     %br/
-    = profile_form.text_field :phonenumber, autocomplete: "off"
-    .field
-    = profile_form.label :photo_upload
+    = f.password_field :password_confirmation, autocomplete: "off"
+  .field
+    = f.label :current_password
+    %i (we need your current password to confirm your changes)
     %br/
-    = profile_form.text_field :photoupload, autocomplete: "off"
-    .field
-    = profile_form.label :rent_buy_unknown
-    %br/
-    = profile_form.text_field :rentvsbuyvsunknown, autocomplete: "off"
-    .field
-    = profile_form.label :when_looking_for
-    %br/
-    = profile_form.text_field :whenlookkingfor, autocomplete: "off"
-    .field
-    = profile_form.label :no_of_beds
-    %br/
-    = profile_form.text_field :noofbeds, autocomplete: "off"
-    .field
-    = profile_form.label :no_of_bathrooms
-    %br/
-    = profile_form.text_field :noofbathrooms, autocomplete: "off"
-    .field
-    = profile_form.label :budget
-    %br/
-    = profile_form.text_field :budget, autocomplete: "off"
-    .field
-    = profile_form.label :no_of_children
-    %br/
-    = profile_form.text_field :noofchildren, autocomplete: "off"
-    .field
-    = profile_form.label :age_child
-    %br/
-    = profile_form.text_field :agechild, autocomplete: "off"
-    .field
-    = profile_form.label :decision_1
-    %br/
-    = profile_form.text_field :decision1, autocomplete: "off"
-    .field
-    = profile_form.label :Decesion_2
-    %br/
-    = profile_form.text_field :decision2, autocomplete: "off"
-    .field
-    = profile_form.label :work_adresses
-    %br/
-    = profile_form.text_area :workaddress, autocomplete: "off"
-    .actions
+    = f.password_field :current_password, autocomplete: "off"
+  .actions
     = f.submit "Update"
 %h3 Cancel my account
 %p
-  = link_to "Back", :back
+  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+= link_to "Back", :back

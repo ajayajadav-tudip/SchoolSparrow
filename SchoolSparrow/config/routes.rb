@@ -4,10 +4,6 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'home#index'
-
-  put '/update_profile'=> 'users#update_user_profile', as: :update_user_profile
-
-
   get '/dashboard/home' => 'dashboard#dashboard_home', as: :dashboard_home
   get '/dashboard/admin' => 'dashboard#dashboard_admin', as: :dashboard_admin
 
