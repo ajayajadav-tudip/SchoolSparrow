@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/dashboard' => 'dashboard#dashboard_home', as: :dashboard_home
   get '/gallery' => 'dashboard#dashboard_admin', as: :dashboard_admin
+  put '/update_profile'=> 'users#update_user_profile', as: :update_user_profile
 
 
 

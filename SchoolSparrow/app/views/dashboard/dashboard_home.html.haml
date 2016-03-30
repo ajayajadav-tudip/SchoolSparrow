@@ -78,9 +78,7 @@
             %li.userlinks
               %ul.dropdown-menu
                 %li
-                  %a{:href => "#"}
-                    Edit Profile
-                    %i.pull-right.fa.fa-pencil
+                  = link_to 'Edit profile',edit_user_registration_path
                 %li
                   %a{:href => "#"}
                     Account
@@ -91,7 +89,7 @@
                     %i.pull-right.fa.fa-question-circle
                 %li.divider
                 %li
-                  %a.text-right{:href => "#"} Sign Out
+                  = link_to "Logout", destroy_user_session_path, method: :delete
         %li.dropdown
           %a.hasnotifications.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             %i.fa.fa-envelope

@@ -16,9 +16,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    @user.build_profile if @user.profile.blank?
+  end
 
   # PUT /resource
   # def update

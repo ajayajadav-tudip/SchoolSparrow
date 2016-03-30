@@ -1,6 +1,6 @@
 
 
-['Customer', 'Broker', 'Managing_Broker', 'Admin', 'Seller'].each do |role|
+['Prospect', 'Broker', 'Managing_Broker', 'Admin', 'Seller'].each do |role|
   Role.find_or_create_by({name: role})
 end
 
