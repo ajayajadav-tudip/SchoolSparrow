@@ -4,7 +4,7 @@
       .modal-body
         .row.text-center.pad-bottom
           %h2 Change your password
-          = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+          = form_for(:user, url: edit_password_path, html: { method: :put }) do |f|
             = devise_error_messages!
             = f.hidden_field :reset_password_token
             .field
@@ -15,6 +15,25 @@
               = f.label :password_confirmation, "Confirm new password"
               %br/
               = f.password_field :password_confirmation, autocomplete: "off"
+
             .actions
               = f.submit "Change my password"
           = render "users/shared/links"
+
+-#%h2 Change Password
+-#= form_for(@user, :url => { :action => "update_password" } ) do |f|
+-#  .field
+-#    = f.label :password, "Password"
+-#    %br/
+-#    = f.password_field :password, :autocomplete => "off"
+-#  .field
+-#    = f.label :password_confirmation
+-#    %br/
+-#    = f.password_field :password_confirmation
+-#  .field
+-#    = f.label :current_password
+-#    %br/
+-#    = f.password_field :current_password
+-#
+-#  .action_container
+-#    = f.submit
